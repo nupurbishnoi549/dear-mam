@@ -29,7 +29,7 @@
     color: purple;
 }
 section{
-    background-image: url(../image/image\ 63.png);
+    /* background-image: url(../image/image\ 63.png); */
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
