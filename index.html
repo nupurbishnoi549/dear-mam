@@ -4,52 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY dear mam </title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Shayari for Teacher</title>
+    <style>
+        /* General styling for the page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6D83F2, #A988E2, #C695D9);
+            /* Gradient background */
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        /* Gradient animation */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            /* Translucent background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            /* Slight zoom effect on hover */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            animation: slideIn 2.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .btn {
+            background-color: #FF6F61;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #FF4E42;
+            transform: scale(1.1);
+        }
+
+        audio {
+            display: none;
+            /* Hide the default audio player */
+        }
+
+        .credits {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <div class="d-flex t_c j_c">
-               
-            </div>
-            <div class="d-flex t_c j_c">
-                <h2 class="Shilpa"><span style="color: red;">Name</span><span style="color: black;"> =</span>
-                    Shilpa</h2>
-            </div>
-            <div class="d-flex t_c j_c">
-                <h2 class="hobby"><span style="color: green;">Hobby</span><span style="color: black;"> =</span>singing
-                </h2>
-            </div>
-            <div class="d-flex t_c j_c">
-                <h2 class="Best_friend"><span style="color: blue;">Best friend</span><span style="color: black;"> =</span> Tamana
-                </h2>
-            </div>
-            <div class="d-flex t_c j_c">
-                <h2 class="Shilpa"><span style="color: red;">Name</span><span style="color: black;"> =</span>
-                    Shilpa</h2>
-            </div>
-         
-            <div class="d-flex t_c j_c">
-                <h2 class="hobby"><span style="color: green;">Hobby</span><span style="color: black;"> =</span>singing
-                </h2>
-            </div>
-           
-           
-           
-            <div class="d-flex t_c j_c">
-                <h2 class="Best_friend"><span style="color: blue;">Best friend</span><span style="color: black;"> =</span> Tamana
-                </h2>
-          
-          
-          
-            </div>
-            <div class="d-flex t_c j_c">
-                <h2 class="Best_friend"><span style="color: blue;">Best friend</span><span style="color: black;"> =</span> Tamana
-                    </h2>
-        </div>
-    </section>
+
+    <div class="container">
+        <h1>Heartfelt Shayari for You</h1>
+        <p>
+            "Ustad ki mahfil mein hum sitare hain, <br>
+            Unki parchaiyon mein hum savare hain. <br>
+            Har harf jo likhte hain wo seekh unse, <br>
+            Dil se ham unka izzatdaar hain."
+        </p>
+
+        <button class="btn" onclick="playShayari()">Play Shayari</button>
+
+        <!-- Audio for Shayari -->
+        <audio id="shayariAudio">
+            <source src="shayari.mp3" type="audio/mpeg"> <!-- Replace with your audio file -->
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Credits -->
+    <div class="credits">
+        <p>Designed with ❤️ for an amazing teacher</p>
+    </div>
+
+    <script>
+        // Play the Shayari audio when the button is clicked
+        function playShayari() {
+            var audio = document.getElementById("shayariAudio");
+            audio.play();
+        }
+    </script>
+
 </body>
 
 </html>
