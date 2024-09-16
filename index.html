@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayari for Teacher</title>
+    <title>Shayari for Teacher - Secret Superstar</title>
     <style>
         /* General styling for the page */
         body {
@@ -20,6 +20,7 @@
             align-items: center;
             height: 100vh;
             color: #fff;
+            overflow: hidden;
         }
 
         /* Gradient animation */
@@ -45,6 +46,8 @@
             border-radius: 15px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.5s;
+            max-width: 800px;
+            margin: 20px;
         }
 
         .container:hover {
@@ -53,8 +56,8 @@
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
             letter-spacing: 2px;
             animation: fadeIn 2s ease-in-out;
         }
@@ -70,8 +73,8 @@
         }
 
         p {
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            font-size: 1.2em;
+            margin-bottom: 30px;
             line-height: 1.6;
             animation: slideIn 2.5s ease-in-out;
         }
@@ -114,18 +117,56 @@
             font-size: 0.9em;
             opacity: 0.8;
         }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .btn {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Heartfelt Shayari for You</h1>
+        <h1>Shayari for My Teacher - Secret Superstar</h1>
         <p>
-            "Ustad ki mahfil mein hum sitare hain, <br>
-            Unki parchaiyon mein hum savare hain. <br>
-            Har harf jo likhte hain wo seekh unse, <br>
-            Dil se ham unka izzatdaar hain."
+    I believe in this line <br> लाखौ मिले मगर। <br> कोई ना तुमसा मिला।! ❤❤
+
+
         </p>
 
         <button class="btn" onclick="playShayari()">Play Shayari</button>
@@ -137,9 +178,9 @@
         </audio>
     </div>
 
-    <!-- Credits -->
+    <!-- Introduction Section -->
     <div class="credits">
-        <p>Designed with ❤️ for an amazing teacher</p>
+        <p>Designed with ❤️ for Shilpa mam, a secret superstar with a passion for singing.</p>
     </div>
 
     <script>
