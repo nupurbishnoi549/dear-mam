@@ -4,210 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shayari for Teacher - Secret Superstar</title>
+    <title>Colorful Rose Tribute</title>
     <style>
-        /* General styling for the page */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #6D83F2, #A988E2, #C695D9);
-            /* Gradient background */
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
-            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4, #fad0c4, #fcb69f);
+            /* Colorful gradient */
+            font-family: 'Arial', sans-serif;
+            background-size: cover;
+            background-position: center;
+            position: relative;
             overflow: hidden;
-        }
-
-        /* Gradient animation */
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
         }
 
         .container {
             text-align: center;
-            background: rgba(0, 0, 0, 0.7);
-            /* Translucent background */
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.5s;
-            max-width: 800px;
-            margin: 20px;
-        }
-
-        .container:hover {
-            transform: scale(1.05);
-            /* Slight zoom effect on hover */
+            color: #fff;
+            z-index: 1;
+            max-width: 1140px;
+            /* Ensure the content is above the background elements */
         }
 
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 5px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+            color: #ff4757;
+            text-shadow: 3px 3px 6px #d00000;
+        }
+
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+            opacity: 0;
+            animation: slideIn 3s ease-in-out forwards;
+            color: #ff6348;
+            text-shadow: 2px 2px 5px #ff4500;
+        }
+
+        .photo-gallery {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards 3s;
+            height: 300px;
+            width: 300px;
+            margin: auto;
+        }
+
+        .photo-gallery img {
+            /* width: 150px; */
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+            /* Slight zoom effect on hover */
+        }
+
+        /* Rose Animation */
+        .rose {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('rose.png');
+            /* Add a rose image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall 8s linear infinite;
+        }
+
+        /* Leaf Animation */
+        .leaf {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('leaf.png');
+            /* Add a leaf image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
         }
 
         @keyframes fadeIn {
-            from {
+            0% {
                 opacity: 0;
+                transform: scale(0.9);
             }
 
-            to {
+            100% {
                 opacity: 1;
+                transform: scale(1);
             }
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            animation: slideIn 2.5s ease-in-out;
         }
 
         @keyframes slideIn {
-            from {
-                transform: translateY(50px);
+            0% {
                 opacity: 0;
+                transform: translateY(50px);
             }
 
-            to {
-                transform: translateY(0);
+            100% {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .btn {
-            background-color: #FF6F61;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1.2em;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #FF4E42;
-            transform: scale(1.1);
-        }
-
-        audio {
-            display: none;
-            /* Hide the default audio player */
-        }
-
-        .credits {
-            margin-top: 30px;
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            p {
-                font-size: 1.1em;
-            }
-
-            .container {
-                padding: 20px;
-            }
-
-            .btn {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            .btn {
-                font-size: 0.9em;
-                padding: 8px 16px;
-            }
-        }
-
-        .photo {
-            margin: 20px 0;
-        }
-
-        .photo img {
+        /* Particle Decoration */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 10px;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle,
+        .leaf,
+        .rose {
+            animation: moveParticles 5s linear infinite;
+        }
+
+        @keyframes moveParticles {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-        <h1>Shayari for My Teacher - Secret Superstar</h1>
-        <div class="photo">
-            <img src="./assets/image/image 63.png" alt="Photo Placeholder" style="width: 200px; height: 220px;">
-            <!-- Replace with your photo -->
+        <h1>Thank You, Dear Friend</h1>
+        <p class="message">For always being there, supporting, and guiding with kindness and wisdom!</p>
+
+        <!-- Photo Gallery -->
+        <div class="photo-gallery">
+            <img src="photo1.jpg" alt="Friend 1">
+            <img src="./assets/image/mam_img.png" alt="Friend 2">
+            <img src="photo3.jpg" alt="Friend 3">
         </div>
-        <p>
-            *manjil mile na mile , Ye to muqdar ki baat h.<br> *Hum koshish hi Na kre,,,, Ye to glat baat h.<br>
-            *Jindagi jakhmo
-            se bhari
-            pdi h,, vquat ko marham banana Sekh lo .. <br>*harna to h Ek din moot se,, filhall jindagi Jenna Sikh lo.
-            😈😈
-        </p>
-
-        <button class="btn" onclick="playShayari()">Play Shayari</button>
-
-        <!-- Audio for Shayari -->
-        <audio id="shayariAudio">
-            <source src="shayari.mp3" type="audio/mpeg"> <!-- Replace with your audio file -->
-            Your browser does not support the audio element.
-        </audio>
     </div>
 
-    <!-- Introduction Section -->
-    <div class="credits">
-        <p>Designed with ❤️ by Shilpa, a secret superstar with a passion for singing.</p>
+    <!-- Particle and Leaf/Rose Animation -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
     </div>
+
+    <!-- Falling Roses and Leaves -->
+    <div class="rose" style="left: 15%; animation-delay: 0s;"></div>
+    <div class="rose" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="rose" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="leaf" style="left: 70%; animation-delay: 3s;"></div>
+    <div class="leaf" style="left: 90%; animation-delay: 4s;"></div>
 
     <script>
-        // Play the Shayari audio when the button is clicked
-        function playShayari() {
-            var audio = document.getElementById("shayariAudio");
-            audio.play();
+        // Generate random particles for dynamic effect
+        for (let i = 0; i < 100; i++) {
+            let particle = document.createElement("div");
+            particle.className = "particle";
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particle.style.width = `${Math.random() * 10}px`;
+            particle.style.height = `${Math.random() * 10}px`;
+            document.querySelector(".particles").appendChild(particle);
+        }
+
+        // Generate falling roses and leaves
+        for (let i = 0; i < 20; i++) {
+            let rose = document.createElement("div");
+            rose.className = "rose";
+            rose.style.left = `${Math.random() * 100}%`;
+            rose.style.animationDelay = `${Math.random() * 10}s`;
+            document.body.appendChild(rose);
+        }
+
+        for (let i = 0; i < 20; i++) {
+            let leaf = document.createElement("div");
+            leaf.className = "leaf";
+            leaf.style.left = `${Math.random() * 100}%`;
+            leaf.style.animationDelay = `${Math.random() * 10}s`;
+            document.body.appendChild(leaf);
         }
     </script>
-
 </body>
 
-</html>
+</html
